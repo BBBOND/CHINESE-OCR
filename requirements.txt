@@ -1,0 +1,14 @@
+easydict
+keras
+Cython
+opencv-python
+matplotlib
+pillow
+h5py
+lmdb
+mahotas
+futures==3.1.1
+tensorflow
+torch
+torchvision
+numpy

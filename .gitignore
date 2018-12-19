@@ -1,5 +1,3 @@
-modelAngle.h5
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -103,4 +101,9 @@ ENV/
 
 .DS_Store
 .idea/
+.vscode/
+
+modelAngle.h5
 *.h5
+ctpn.pb
+checkpoints/

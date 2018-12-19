@@ -15,7 +15,7 @@ from lib.fast_rcnn.config import cfg
 from lib.fast_rcnn.test import test_ctpn
 from lib.fast_rcnn.nms_wrapper import nms
 from lib.utils.timer import Timer
-from text_proposal_connector import TextProposalConnector
+from .text_proposal_connector import TextProposalConnector
 
 CLASSES = ('__background__', 'text')
 
@@ -38,6 +38,9 @@ def save_results(image_name, im, line, thresh):
             im, (bbox[0], bbox[1]), (bbox[2], bbox[3]),
             color=(0, 0, 255),
             thickness=1)
+    cv2.imshow("111", im)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
     image_name = image_name.split('/')[-1]
     cv2.imwrite(os.path.join("../data/results", image_name), im)
 
@@ -97,7 +100,7 @@ if __name__ == '__main__':
     #               os.path.join(os.getcwd(), "checkpoints/model_final.ckpt"))
     saver.restore(sess,
                   os.path.join(os.getcwd(),
-                               "/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/ctpn/checkpoints/VGGnet_fast_rcnn_iter_50000.ckpt"))
+                               "/Volumes/KIM/projects/AI_Projects/CHINESE-OCR/ctpn/checkpoints/VGGnet_fast_rcnn_iter_50000.ckpt"))
     print(' done.')
 
     # Warmup on a dummy image
