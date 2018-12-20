@@ -100,7 +100,7 @@ if __name__ == '__main__':
     #               os.path.join(os.getcwd(), "checkpoints/model_final.ckpt"))
     saver.restore(sess,
                   os.path.join(os.getcwd(),
-                               "/Volumes/KIM/projects/AI_Projects/CHINESE-OCR/ctpn/checkpoints/VGGnet_fast_rcnn_iter_50000.ckpt"))
+                               "/content/CHINESE-OCR/ctpn/checkpoints/VGGnet_fast_rcnn_iter_50000.ckpt"))
     print(' done.')
 
     # Warmup on a dummy image
