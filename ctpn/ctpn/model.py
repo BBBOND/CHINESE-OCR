@@ -35,8 +35,8 @@ def load_tf_model():
         '/content/CHINESE-OCR/ctpn/data/checkpoints/')
     reader = tf.train.NewCheckpointReader(ckpt.model_checkpoint_path)
     var_to_shape_map = reader.get_variable_to_shape_map()
-    for key in var_to_shape_map:
-        print("Tensor_name is : ", key)
+    # for key in var_to_shape_map:
+    #     print("Tensor_name is : ", key)
         # print(reader.get_tensor(key))
     saver.restore(sess, ckpt.model_checkpoint_path)
     print("load vggnet done")
